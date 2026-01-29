@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "7-card Poker",
+  "name": "simple 7Poker",
   "version": "1.0.0",
   "description": "fast, simple and fun 7-card Poker game",
   "action": {
