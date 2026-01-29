@@ -6,11 +6,11 @@ Chrome Extension Privacy Policy
 본 확장프로그램은 어떠한 형태의 사용자 데이터도 수집하지 않습니다.
 개발사 및 제 3자와의 데이터 공유는 전혀 이루어지지 않습니다.
 문의 안내
-연락처: jch200325@naver.com
+연락처: jch2325@gmail.com
 Privacy Policy - Chrome Extension
 This Chrome extension does not collect or process any personal or sensitive user data.
 Data Collection and Sharing
 This extension does not collect any form of user data.
 No data is shared with the developers or any third parties.
 Contact Information
-Email: jch200325@naver.com
+Email: jch2325@gmail.com

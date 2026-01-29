@@ -1,11 +1,11 @@
 /**
- * 코인: 첫 100 지급, 10분마다 10 리필.
+ * 코인: 첫 100 지급, 3분마다 10 리필.
  * 시간 리필으로는 REFILL_CAP(100)을 넘을 수 없고, 승리로 얻은 코인은 상한 없음(COIN_CAP까지).
  */
 const COIN_KEY = "seven_poker_coins";
 const REFILL_CAP = 100;
 const COIN_CAP = 9999;
-const REFILL_INTERVAL_MS = 10 * 60 * 1000;
+const REFILL_INTERVAL_MS = 3 * 60 * 1000;
 const REFILL_AMOUNT = 10;
 
 async function loadCoinState() {
