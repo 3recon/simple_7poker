@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  max-height: 520px;
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 13px;
+  background: #1a1a2e;
+  color: #eee;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  background: #16213e;
+  border-bottom: 1px solid #0f3460;
+  flex-shrink: 0;
+}
+
+.header-pot {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.header-pot span {
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.coins {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.coins-label {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.coins-value {
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: 480px;
+  overflow: hidden;
+}
+
+/* Lobby */
+.lobby {
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.refill-hint {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #0f3460;
+  color: #fff;
+}
+
+/* Game */
+.game {
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.hands {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 6px;
+  flex-shrink: 1;
+  min-height: 0;
+}
+
+.hand-block h3 {
+  margin: 0 0 2px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* 내 패 옆 현재 최고 족보 (연한 글씨) */
+.best-hand-label {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #64748b;
+  opacity: 0.9;
+}
+
+.hand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.hand.open {
+  min-height: 52px;
+}
+
+.hand.hidden-cards {
+  margin-top: 4px;
+}
+
+/* 히든 카드: 뒤집힌 느낌 (살짝 어두운 배경 + 얇은 무늬), 숫자/문양은 그대로 표시 */
+.hand.hidden-cards .card {
+  background-color: #e2e8f0;
+  border-color: #94a3b8;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 2px,
+    rgba(148, 163, 184, 0.12) 2px,
+    rgba(148, 163, 184, 0.12) 4px
+  );
+}
+
+.hand.hidden-cards .card.card-concealed {
+  background-color: #475569;
+  border-color: #64748b;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+}
+
+.card {
+  width: 52px;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background: #f9fafb;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+  font-weight: 600;
+  color: #111827;
+  padding: 3px 4px;
+}
+
+.card.red {
+  color: #dc2626;
+}
+
+.card-concealed {
+  background: #334155;
+  border-color: #475569;
+  color: #e5e7eb;
+}
+
+.card-top,
+.card-bottom {
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.card-top {
+  text-align: left;
+}
+
+.card-bottom {
+  text-align: right;
+}
+
+.card-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.betting {
+  margin-top: 4px;
+  padding: 6px 8px;
+  background: #0f172a;
+  border-radius: 6px;
+  border: 1px solid #1e293b;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.actions .btn {
+  flex: 1;
+  min-width: 60px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+}
+
+.action-log {
+  margin-top: 4px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.action-log .action-text {
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.message {
+  margin-top: 6px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  white-space: pre-line;
+  font-size: 0.8rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.message.win {
+  background: rgba(34, 197, 94, 0.2);
+  color: #86efac;
+}
+
+.message.lose {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+.message.tie {
+  background: rgba(148, 163, 184, 0.2);
+  color: #cbd5e1;
+}

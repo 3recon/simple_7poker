@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7 Poker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <div id="header-pot" class="header-pot hidden">Pot <span id="pot">0</span></div>
+    <div class="coins">
+      <span class="coins-label">My Coins</span>
+      <span id="coins" class="coins-value">—</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="lobby" class="lobby">
+      <p id="refill-hint" class="refill-hint"></p>
+      <button id="btn-start" class="btn btn-primary">Start Game</button>
+    </section>
+
+    <section id="game" class="game hidden">
+      <div class="hands">
+        <div class="hand-block">
+          <h3>AI</h3>
+          <div class="hand open" id="ai-open"></div>
+          <div class="hand hidden-cards" id="ai-hidden"></div>
+        </div>
+        <div class="hand-block">
+          <h3>My Hand <span id="player-best-hand" class="best-hand-label"></span></h3>
+          <div class="hand open" id="player-open"></div>
+          <div class="hand hidden-cards" id="player-hidden"></div>
+        </div>
+      </div>
+
+      <div class="betting">
+        <div class="actions" id="actions"></div>
+      </div>
+
+      <div class="action-log">
+        <div>My action: <span id="player-action" class="action-text">—</span></div>
+        <div>AI action: <span id="ai-action" class="action-text">—</span></div>
+      </div>
+
+      <div id="message" class="message"></div>
+    </section>
+  </main>
+
+  <script src="js/card.js"></script>
+  <script src="js/deck.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/hand_evaluator.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/coins.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

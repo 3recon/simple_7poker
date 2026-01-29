@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "7-card Poker",
+  "version": "1.0.0",
+  "description": "fast, simple and fun 7-card Poker game",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"]
+}
